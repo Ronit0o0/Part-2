@@ -245,6 +245,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 778915017389891442, guid: 9e168c920d75efa4bbb360944b8299e2, type: 3}
+  arrayofPlanes:
+  - {fileID: 778915017389891442, guid: 9e168c920d75efa4bbb360944b8299e2, type: 3}
+  - {fileID: 778915017389891442, guid: 643683b0bcce07547958eb12a11f0cbc, type: 3}
+  - {fileID: 778915017389891442, guid: c66dca04211e45e499272b6269d8c7f9, type: 3}
+  - {fileID: 778915017389891442, guid: 6e5d58330917cb44e82e2128f57c2280, type: 3}
 --- !u!4 &1324943420
 Transform:
   m_ObjectHideFlags: 0

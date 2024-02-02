@@ -14,8 +14,12 @@ public class Planes : MonoBehaviour
     public float speed = 1.0f;
     public AnimationCurve landing;
     float timerValue;
+    public GameObject plane;
+    float randomSpeed;
+
     private void Start()
     {
+        randomSpeed = Random.Range(1, 3);
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, transform.position);
@@ -33,12 +37,13 @@ public class Planes : MonoBehaviour
             float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
             rigidbody.rotation = -angle;
         }
-        rigidbody.MovePosition(rigidbody.position + (Vector2)transform.up * speed * Time.deltaTime);
+        rigidbody.MovePosition(rigidbody.position + (Vector2)transform.up * randomSpeed * Time.deltaTime);
     }
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        
+        if (Input.GetKey(KeyCode.Space))
         {
             timerValue += 0.5f * Time.deltaTime;
             float interpeltion = landing.Evaluate(timerValue);
