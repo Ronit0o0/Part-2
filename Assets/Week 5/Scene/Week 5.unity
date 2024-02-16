@@ -1852,6 +1852,7 @@ MonoBehaviour:
   speed: 3
   health: 0
   maxHealth: 5
+  slider: {fileID: 0}
 --- !u!95 &5352724082007727790
 Animator:
   serializedVersion: 5
