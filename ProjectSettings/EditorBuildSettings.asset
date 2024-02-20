@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Assignment/Scenes/GameOver.unity
+    guid: 79044960b6dea6e489a3c86780f7748a
+  - enabled: 1
     path: Assets/Assignment/Scenes/Starting Menu.unity
     guid: d24db1b9e704c9a48a9456d5bbdc13f2
   - enabled: 1
     path: Assets/Assignment/Scenes/GameplayScreen.unity
     guid: feaac3af0081f554cbba112b3f52bda3
   - enabled: 1
-    path: Assets/Assignment/Scenes/GameplayScreen 1.unity
-    guid: 058397b384f6d8a4cac1492e87517832
+    path: Assets/Assignment/Scenes/You Escaped.unity
+    guid: 883816afbf483114eb419bfc61b861f5
   m_configObjects: {}

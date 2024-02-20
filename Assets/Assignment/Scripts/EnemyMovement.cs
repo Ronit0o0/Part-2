@@ -17,7 +17,8 @@ public class EnemyMovement : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPos.position, speed * Time.deltaTime);
     }
 
-    }
+   
+}
 
 
 
