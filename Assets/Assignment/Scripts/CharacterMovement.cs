@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -21,6 +22,13 @@ public class CharacterMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+       if(collision.gameObject.name == "Temporary enemy")
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+    }
 
 }
     
