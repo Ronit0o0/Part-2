@@ -3,38 +3,41 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
 
 public class PlayerSelection : MonoBehaviour
 {
-    bool playerSelected = false;
+    bool playerSelected;
     SpriteRenderer spriteRenderer;
     public Color myColor;
-
+    Rigidbody rb;
+    public float speed = 1000;
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody>();
         spriteRenderer.color = myColor;
+        Selected(false);
+    }
+    public  void OnMouseDown()
+    {
+        Controller.SetSelectedPlayer(this);
     }
 
-    public void Update()
-    {
-        if (playerSelected)
+        public void Selected(bool playerSelected)
         {
-            spriteRenderer.color = Color.green;
+            if (playerSelected)
+            {
+                spriteRenderer.color = Color.green;
+            }
+            else if (!playerSelected)
+            {
+                spriteRenderer.color = myColor;
+            }
         }
-        else if (!playerSelected)
+        public void Move(Vector2 direction)
         {
-            spriteRenderer.color = myColor;
+            rb.AddForce(direction * speed);
         }
     }
 
-    private void OnMouseDown()
-    {
-        playerSelected = true;
-    }
-
-    private void OnMouseUp()
-    {
-        playerSelected = false; 
-    }
-}
