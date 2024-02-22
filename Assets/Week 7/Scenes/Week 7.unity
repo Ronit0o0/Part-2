@@ -4285,6 +4285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5fb05be9d3135b45bd6081a2f0b968e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargeSlider: {fileID: 328347803}
+  maxCharge: 1
 --- !u!4 &2142147484
 Transform:
   m_ObjectHideFlags: 0

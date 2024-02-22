@@ -10,12 +10,12 @@ public class PlayerSelection : MonoBehaviour
     bool playerSelected;
     SpriteRenderer spriteRenderer;
     public Color myColor;
-    Rigidbody rb;
+    Rigidbody2D rb;
     public float speed = 1000;
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         spriteRenderer.color = myColor;
         Selected(false);
     }
